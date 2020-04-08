@@ -38,7 +38,7 @@ ingress:
     production: false
 kaniko: true
 repository: nexus
-secretStorage: vault
+secretStorage: local
 storage:
   backup:
     enabled: false
@@ -54,8 +54,8 @@ storage:
     url: ""
 vault: {}
 velero:
-  schedule: ""
-  ttl: ""
+  schedule: 0 * * * *
+  ttl: 720h0m0s
 versionStream:
   ref: v2.0.118
   url: https://github.com/jenkins-x-labs/jenkins-x-versions.git
